@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Greetings</string>
+    <string name="loading_greetings">Loading Greetings</string>
+    <string name="refresh">Refresh</string>
+    <string name="greeting">Greeting</string>
+    <string name="language">Language</string>
+    <string name="symbol">Symbol</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.helloworldandroid.ui.greetings.GreetingsFragmentViewModel" />
+        <import type="android.view.View"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.greetings.GreetingsFragment">
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shimmer_repeat_mode="restart"
+            app:shimmer_clip_to_children="true"
+            app:shimmer_duration="1500"
+            app:shimmer_shape="linear"
+            android:focusable="true"
+            android:contentDescription="@string/loading_greetings"
+            android:visibility="@{viewmodel.loadingGreetings? View.VISIBLE: View.GONE}"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                    <include layout="@layout/adapter_greeting_shimmer"/>
+                </LinearLayout>
+            </ScrollView>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/greetingsRecylcerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{viewmodel.loadingGreetings? View.GONE: View.VISIBLE}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
