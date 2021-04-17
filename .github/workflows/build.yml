@@ -19,7 +19,7 @@ jobs:
           java-version: 11
          
       - name: Build with Gradle
-        run: ./gradlew assemble
+        run: ./gradlew assembleDebug
         env:
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
@@ -30,9 +30,3 @@ jobs:
         with:
           name: greetings_debug.apk
           path: app/build/outputs/apk/debug/app-debug.apk
-          
-      - name: Archive artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: greetings_release.apk
-          path: app/build/outputs/apk/release/app-release.apk
