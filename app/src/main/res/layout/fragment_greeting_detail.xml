@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.helloworldandroid.ui.greetingdetail.GreetingsDetailFragmentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/greetingTitleTextView"
+            style="@style/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="@string/greeting"
+            android:transitionName="greetingTransitionName"
+             />
+
+        <TextView
+            android:id="@+id/greetingTextView"
+            style="@style/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/greetingTitleTextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@{viewmodel.greeting.text}"
+            tools:text="Hello World" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2"
+            />
+
+        <TextView
+            android:id="@+id/languageTitleTextView"
+            style="@style/heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/symbolTitleTextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="@string/language"
+             />
+
+        <TextView
+            android:id="@+id/languageTextView"
+            style="@style/heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/languageTitleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/symbolTextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@{viewmodel.greeting.language}"
+            tools:text="English" />
+
+        <TextView
+            android:id="@+id/symbolTitleTextView"
+            style="@style/heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/languageTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/languageTitleTextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="@string/symbol"
+             />
+
+        <TextView
+            android:id="@+id/symbolTextView"
+            style="@style/heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/symbolTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/languageTextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@{viewmodel.greeting.symbol}"
+            tools:text="en"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

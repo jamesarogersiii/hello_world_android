@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/greetings"
+    app:startDestination="@id/greetingsFragment">
+
+    <activity
+        android:id="@+id/greetingsActivity"
+        android:name="com.example.helloworldandroid.GreetingsActivity"
+        android:label="activity_greetings"
+        tools:layout="@layout/activity_greetings" />
+    <fragment
+        android:id="@+id/greetingsFragment"
+        android:name="com.example.helloworldandroid.ui.greetings.GreetingsFragment"
+        android:label="Greetings">
+        <action
+            android:id="@+id/action_greetingsFragment_to_greetingDetailFragment"
+            app:destination="@id/greetingDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/greetingDetailFragment"
+        android:name="com.example.helloworldandroid.ui.greetingdetail.GreetingDetailFragment"
+        android:label="Greeting"
+        tools:layout="@layout/fragment_greeting_detail" >
+        <argument
+            android:name="greeting"
+            app:argType="com.example.helloworldandroid.greetings.Greeting" />
+    </fragment>
+</navigation>
