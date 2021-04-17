@@ -28,5 +28,5 @@ jobs:
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: greetings_debug.apk
+          name: greetings.apk
           path: app/build/outputs/apk/debug/app-debug.apk
