@@ -28,35 +28,17 @@
             android:contentDescription="@string/loading_greetings"
             android:visibility="@{viewmodel.loadingGreetings? View.VISIBLE: View.GONE}"
             >
-
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                    <include layout="@layout/adapter_greeting_shimmer"/>
-                </LinearLayout>
-            </ScrollView>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/adapter_greeting_shimmer"/>
+                <include layout="@layout/adapter_greeting_shimmer"/>
+                <include layout="@layout/adapter_greeting_shimmer"/>
+                <include layout="@layout/adapter_greeting_shimmer"/>
+                <include layout="@layout/adapter_greeting_shimmer"/>
+                <include layout="@layout/adapter_greeting_shimmer"/>
+            </LinearLayout>
 
         </com.facebook.shimmer.ShimmerFrameLayout>
 

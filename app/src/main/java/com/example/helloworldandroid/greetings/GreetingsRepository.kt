@@ -12,7 +12,7 @@ class GreetingsRepository @Inject constructor(private val greetingCall: Greeting
 
     suspend fun greetings(): Flow<List<Greeting>> = withContext(Dispatchers.IO) {
         val greetingFlow = greetingDatabase.greetingDao().greetings()
-        GlobalScope.launch {  fetchGreetings() }
+        MainScope().launch {  fetchGreetings() }
         return@withContext greetingFlow
     }
 

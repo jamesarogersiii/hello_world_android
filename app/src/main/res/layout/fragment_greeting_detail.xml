@@ -22,6 +22,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:text="@string/greeting"
             android:transitionName="greetingTransitionName"
+            android:labelFor="@+id/greetingTextView"
              />
 
         <TextView
@@ -52,6 +53,7 @@
             app:layout_constraintEnd_toStartOf="@id/symbolTitleTextView"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:text="@string/language"
+            android:labelFor="@id/languageTextView"
              />
 
         <TextView
@@ -76,6 +78,7 @@
             app:layout_constraintStart_toEndOf="@id/languageTitleTextView"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:text="@string/symbol"
+            android:labelFor="@id/symbolTextView"
              />
 
         <TextView

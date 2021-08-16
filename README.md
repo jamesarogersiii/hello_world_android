@@ -12,7 +12,7 @@ An example project using Android
     - View binding
   - Repository
   - Room database
-  - Hilt depedency injection
+  - Hilt dependency injection
   - Navigation UI
   - Retrofit
   - Facebook Shimmer
