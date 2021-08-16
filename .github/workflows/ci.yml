@@ -19,7 +19,7 @@ jobs:
           java-version: 11
          
       - name: Build with Gradle
-        run: ./gradlew assembleDebug
+        run: ./gradlew testDebug assemble
         env:
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
